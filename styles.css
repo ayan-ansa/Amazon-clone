@@ -4,6 +4,10 @@
     border: border-box;
 }
 
+body {
+    position: relative;
+}
+
 .navbar {
     height: 60px;
     background-color: #0f1111;
@@ -30,9 +34,10 @@
 .border {
     border: 1.5px solid transparent;
 }
-.border:hover{
+
+.border:hover {
     border: 1.5px solid white;
-    
+
 }
 
 /*box2*/
@@ -92,6 +97,7 @@
     border-bottom-right-radius: 3px;
     color: #0f1111;
 }
+
 /* .recect-search{
     margin: 0px px 0px 0px;
     color:black;
@@ -174,38 +180,59 @@ span {
     font-weight: 700;
 }
 
-/* hero section */
-.hero-section {
-    background-image: url("images/mobile.jpg");
-    background-size: cover;
-    justify-content: center;
-    align-items: flex-end;
-    height: 240px;
+.swiper-slide {
+    width: 100%;
+    min-height: 300px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 0.2rem !important;
+    background: #8e8989 !important;
+    opacity: 1 !important;
+    transition: 0.5s all linear;
+}
+
+.swiper-pagination-bullet-active {
+    width: 1.5rem !important;
+    background: #fff !important;
+}
+
 
 /* shop section */
 .shop-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background:linear-gradient(#02377e,#0360d9);
+    background: #dbdada;
 }
 
 .box {
     overflow: hidden;
     height: 350px;
     width: 23%;
-    
     background-color: white;
     padding: 20px 0px 15px;
     margin-top: 15px;
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
 }
-.text{
+
+.text {
     display: flex;
     justify-content: center;
 }
+
 .box-img {
     height: 240px;
     background-image: url("watch.jpg");
@@ -222,7 +249,8 @@ span {
 .box-content p {
     color: #007185;
 }
-.fitness{
+
+.fitness {
     display: flex;
     justify-content: center;
     align-items: center;

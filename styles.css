@@ -62,9 +62,7 @@ body {
 
 /*box3*/
 .nav-search {
-    /* justify-content: space-evenly; */
     display: flex;
-    /* background-color: pink; */
     width: 620px;
     height: 40px;
     border-radius: 3px;
@@ -79,11 +77,16 @@ body {
     border: none;
 }
 
+.search-form {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
 .search-input {
-    width: 120%;
     font-size: 15px;
     border: none;
-    font-size: 15px;
+    width: 100%;
+    height: 93%;
 }
 
 .search-icon {
@@ -98,20 +101,6 @@ body {
     color: #0f1111;
 }
 
-/* .recect-search{
-    margin: 0px px 0px 0px;
-    color:black;
-    position: absolute;
-    top: 50px;
-    background-color:white;
-    padding: 8px ;
-    box-shadow: -5px 5px 7px rgba(0, 0, 0, 0.2),
-    5px 5px 10px rgba(0, 0, 0, 0.2); 
-    width: 530px;
-    right: 480px;
-    border-top: 1px solid #cccc;
-    height: 300px;
-} */
 
 .nav-search:hover {
     border: 2px solid orange;
@@ -180,12 +169,11 @@ span {
     font-weight: 700;
 }
 
-.swiper-slide {
+.container {
     width: 100%;
-    min-height: 300px;
+    min-height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .swiper-slide img {
@@ -211,16 +199,15 @@ span {
 
 /* shop section */
 .shop-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    column-gap: 1.8rem;
     background: #dbdada;
 }
 
 .box {
-    overflow: hidden;
     height: 350px;
-    width: 23%;
     background-color: white;
     padding: 20px 0px 15px;
     margin-top: 15px;
@@ -233,25 +220,47 @@ span {
     justify-content: center;
 }
 
-.box-img {
+.box-img img{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.img-div img {
+    object-fit: cover;
+    width: 280px;
     height: 240px;
-    background-image: url("watch.jpg");
-    background-size: cover;
     margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .box-content {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem 0;
+    
 }
 
 .box-content p {
     color: #007185;
 }
 
-.fitness {
+.moreBtn {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#showMoreBtn {
+    font-size: 1rem;
+    background: #554297;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#showMoreBtn a {
+    text-decoration: none;
+    color: #fff;
 }
